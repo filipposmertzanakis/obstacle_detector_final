@@ -1,0 +1,134 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html {
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #f2f2f7 0%, #e5e5ea 100%);
+  color: #1c1c1e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container {
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Section Headings */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c2c2e;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #3a3a3c;
+}
+
+/* Voice Button */
+button {
+  padding: 10px 20px;
+  background-color: #8e8e93;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 16px;
+}
+
+button:hover {
+  background-color: #636366;
+}
+
+/* Alert Box */
+.alert {
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(255, 59, 48, 0.3);
+}
+
+/* Dashboard Wrapper */
+.dashboard {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column; 
+  background-color:transparent;
+  padding: 24px;
+  border-radius: 20px;
+  width:50%;
+}
+
+/* Chart Canvas */
+#distanceChart {
+  width: 100%;
+  max-height: 200px;
+  margin: 20px 0;
+}
+
+/* Status Paragraphs */
+.status p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.status p:nth-child(2) {
+  font-weight: 500;
+}
+
+.status .danger {
+  color: #ff453a;
+}
+
+.status .safe {
+  color: #34c759;
+}
+
+/* Color themes based on alert severity */
+.alert-critical {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.alert-warning {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.alert-caution {
+  background-color: #e6f7ff;
+  color: #333;
+}
+
+.container button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+

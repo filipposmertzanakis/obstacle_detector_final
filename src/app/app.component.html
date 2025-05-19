@@ -1,0 +1,31 @@
+<div class="container" [ngClass]="getAlertSeverityClass()">
+  <h1>Ανίχνευση Εμποδίου</h1>
+  <p>Απόσταση: {{ distance }} cm</p>
+
+  <button (click)="speak('this is a speech test')">🔊 Δοκιμή Φωνής</button>
+  <button (click)="toggleMute()">
+    {{ isAudioMuted ? '🔇 Ήχος Απενεργοποιημένος' : '🔊 Ήχος Ενεργός' }}
+  </button>
+
+  <div *ngIf="distance < warningThreshold" class="alert">
+    ⚠️ Προσοχή! Εμπόδιο μπροστά σας!
+  </div>
+</div>
+
+<hr />
+
+<div class="dashboard">
+  <h2>📊 Obstacle Detection Dashboard</h2>
+  <canvas id="distanceChart"></canvas>
+
+  <div class="status">
+    <p>📏 Current Distance: <strong>{{ distance }} cm</strong></p>
+
+    <p *ngIf="distance < warningThreshold" class="danger">
+      🚨 Warning! Obstacle detected!
+    </p>
+    <p *ngIf="distance >= warningThreshold" class="safe">
+      ✅ Safe distance.
+    </p>
+  </div>
+</div>
